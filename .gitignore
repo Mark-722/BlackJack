@@ -1,0 +1,41 @@
+# Ignore build directories and outputs
+build/
+bin/
+
+# Ignore object and temporary files
+*.o
+*.obj
+
+# Ignore executables and shared libraries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore log and temporary files
+*.log
+*.tmp
+
+# Ignore IDE/editor config files
+.vscode/
+*.code-workspace
+
+# Ignore macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment or secret config files
+.env
+
+# Ignore CMake files (if you use CMake build system)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+makefile
+
+# Ignore any user-specific or local config (optional, adjust to your editors)
+*.user
+*.suo
+*.swp
