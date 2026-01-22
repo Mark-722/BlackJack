@@ -82,7 +82,7 @@ std::string Card :: tenplus_toString(tenplus tenplus1) const{
     case 4:
         return "Under";    
     case 5:
-        return "Black";
+        return "Blank";
     default:
         return "tenplus to string error";
     }
