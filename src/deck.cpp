@@ -63,3 +63,11 @@ Deck::Deck(): no_of_cards(0), no_of_decks(1) {
     }
 
 }
+
+const std::vector<Card>& Deck::get_deck() const {  // ✅ Reference, no param
+    return _deck;
+}
+
+Deck :: ~Deck(){
+    std::cout << "Deck Gone" << std::endl;
+}

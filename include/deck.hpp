@@ -19,7 +19,7 @@ class Deck {
         
         Deck(); //default constructor
 
-        Deck(); //permaatirsed
+        //Deck(); //permaatirsed to be added
 
         void combine_decks(const Deck& other); //const - cannot modify 'other'      Reference (&) - no copy, just alias
 
@@ -34,6 +34,8 @@ class Deck {
         Card return_top_card(Deck Deck1); //return the value of top card
 
         //possible deal function
+
+        const std::vector<Card>& get_deck() const;
 
         ~Deck();
 };
