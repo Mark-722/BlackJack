@@ -40,7 +40,7 @@ void Deck :: combine_decks(const Deck& other){ //AI helped
 }
 
 Deck::Deck(): no_of_cards(0), no_of_decks(1) {
-    for (int i = 2; i < 10; i++){ //value cards loop
+    for (int i = 2; i <= 9; i++){ //value cards loop
         for (int j = 0; j < 4; j++){ //suit card loop
             Card new_card(static_cast<Suit>(j),i,static_cast<tenplus>(4));
             _deck.push_back(new_card);
@@ -48,7 +48,7 @@ Deck::Deck(): no_of_cards(0), no_of_decks(1) {
         }
 
     }
-    for(int i=0; i<3; i++){ //tenplus - ace
+    for(int i=0; i<4; i++){ //tenplus - ace
         for(int j = 0; j<4; j++){
             Card new_card(static_cast<Suit>(j),10,static_cast<tenplus>(i));
             _deck.push_back(new_card);
@@ -56,7 +56,7 @@ Deck::Deck(): no_of_cards(0), no_of_decks(1) {
         }
     }
 
-    for(int j = 0; j<4; j++){ //ace
+    for(int j = 0; j < 4; j++){ //ace
         Card new_card(static_cast<Suit>(j),11,static_cast<tenplus>(3));
         _deck.push_back(new_card);
         no_of_cards++;
