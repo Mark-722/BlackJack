@@ -18,6 +18,7 @@ enum tenplus {
     Ace,
     Under,
     Zero,
+    Ten,
 };
 
 class Card {

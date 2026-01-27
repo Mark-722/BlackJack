@@ -83,6 +83,8 @@ std::string Card :: tenplus_toString(tenplus tenplus1) const{
         return "Under";    
     case 5:
         return "Blank";
+    case 6:
+        return "Ten";
     default:
         return "tenplus to string error";
     }
@@ -101,7 +103,7 @@ Card :: Card(Suit suit, int value, tenplus tenplus): _suit(suit), _value(value),
 
 
 Card :: ~Card(){
-    cout << "Card gone" << endl;
+    //cout << "Card gone" << endl;
 }
 
 Suit Card :: get_cardSuit() const{
