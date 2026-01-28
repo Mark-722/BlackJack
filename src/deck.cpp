@@ -78,3 +78,34 @@ const std::vector<Card>& Deck::get_deck() const {  // ✅ Reference, no param
 Deck :: ~Deck(){
     std::cout << "Deck Gone" << std::endl;
 }
+
+Deck :: Deck(std::vector<Card>& customDeck): _deck(customDeck), no_of_cards(static_cast<int>(customDeck.size())), no_of_decks(static_cast<int>(customDeck.size())/52){
+    /*
+    for (int i = 0; i < sizeof(customDeck); i++){
+        Card newCard = customDeck[i];
+        _deck.push_back(newCard);
+    }
+    */ //old logic
+}
+
+int Deck :: get_no_of_decks()const{
+    return this->no_of_decks;
+}
+
+void Deck :: printDeck()const{
+    for (int i = 0; i < static_cast<int>(_deck.size()); i++){
+        std::cout << "Card " << i+1 << " is the: ";
+        Card cardA = _deck[i]; //i dont understand why I have to do this. Why can't I just do _deck[i].print_cardSuit(); 
+        std::cout<<cardA.get_gameValue();
+        std::cout<<" of ";
+        cardA.print_cardSuit(); 
+        //std::cout << "\n";
+    }
+    
+
+    /*
+    for (const auto& card : _Deck) {
+        card.print_cardSuit();
+    }
+        */
+}

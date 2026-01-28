@@ -16,7 +16,6 @@ int main(){
 
     std::cout << "Deck A has | " << DeckA.get_no_of_cards() << " number of cards" << std::endl;
 
-    //---------------- Working on Shuffle Function-------------------------
     DeckA.shuffleDeck();
     std::cout<<"Shuffle Deck\n"<< "---------------------" << std::endl;
 
@@ -26,7 +25,23 @@ int main(){
         Card3.print_cardSuit(); //needs to be fixed
         std::cout<< i << std::endl;
     }
-    //---------------- Working on Shuffle Function-----------------------
+
+    std::cout << "----------------Custom Deck Test---------------\n";
+
+    std::vector<Card> customDeck;
+
+    Card CardA(Hearts, 3, Under);
+    Card CardB(Diamonds,10 ,Ten);
+    Card CardC(Spades, 10, Jack);
+
+    customDeck.push_back(CardA);
+    customDeck.push_back(CardB);
+    customDeck.push_back(CardC);
+
+    Deck DeckABC(customDeck);
+    std::cout << DeckABC.get_no_of_cards() << " | " << DeckABC.get_no_of_decks() << std::endl;
+
+    DeckABC.printDeck();
 
     return 0;
 }

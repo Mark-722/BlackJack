@@ -19,11 +19,13 @@ class Deck {
         
         Deck(); //default constructor
 
-        //Deck(); //permaatirsed to be added
+        Deck(std::vector<Card>& customDeck); //permaatirsed to be added
 
         void combine_decks(const Deck& other); //const - cannot modify 'other'      Reference (&) - no copy, just alias
 
         int get_no_of_cards()const;//return size of deck
+
+        int get_no_of_decks()const;
 
         void add_card(Card _Card);
 
@@ -36,6 +38,8 @@ class Deck {
         //possible deal function
 
         const std::vector<Card>& get_deck() const;
+
+        void printDeck()const;
 
         ~Deck();
 };
